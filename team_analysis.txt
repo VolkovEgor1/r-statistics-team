@@ -1,0 +1,24 @@
+# Simple Data Analysis Script
+# Team members: Volkov, Sokolovska
+
+# Function to calculate basic statistics for a numeric vector
+calculate_basic_stats <- function(data) {
+  # Calculate mean, median, and standard deviation
+  stats <- list(
+    mean_value = mean(data, na.rm = TRUE),
+    median_value = median(data, na.rm = TRUE),
+    sd_value = sd(data, na.rm = TRUE)
+  )
+  
+  return(stats)
+}
+
+# Example usage:
+sample_data <- c(23, 45, 67, 89, 12, 34, 56, 78, 90, 11)
+results <- calculate_basic_stats(sample_data)
+
+# Print results
+print("Basic Statistical Analysis")
+print(paste("Mean:", results$mean_value))
+print(paste("Median:", results$median_value))
+print(paste("Standard Deviation:", results$sd_value))
